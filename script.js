@@ -82,6 +82,7 @@ services.forEach((service) => {
         <button class="heartBtn absolute top-4 right-4 text-gray-500 text-xl">♡</button>
 
         <!-- Text info -->
+        
         <h3 class="font-bold text-[black]">${service.mainName}</h3>
         <p class="font-bold">${service.name}
         <p class="font-bold text-lg number text-[black]">${service.number}</p>
