@@ -23,11 +23,13 @@ Event bubbling means that when an event (like click) happens on a child element,
 4]What is Event Delegation in JavaScript? Why is it useful?
 ANS:
 Event delegation means adding an event listener to a parent element instead of each child. It's useful when:
-You have many child elements (like buttons inside cards).
-You add/remove elements dynamically.
-It makes the code faster and easier to manage.
+    You have many child elements (like buttons inside cards).
+    You add/remove elements dynamically.
+    It makes the code faster and easier to manage.
 
 
 5]What is the difference between preventDefault() and stopPropagation() methods?
 ANS:
+    #preventDefault(): Stops the browser's default action (like form submission or link click).
+    #stopPropagation(): Stops the event from going up to parent elements.
 
