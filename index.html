@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Service Directory</title>
     <!-- Tailwind CSS + DaisyUI -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
-</head>
-<body class="bg-green-50">
-
-    <!--  Navbar -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-green-50">
+    <header>
+        <!--  Navbar -->
     <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-        <div class="flex items-center gap-2">
-            <img src="./assets/logo.png" alt="Logo" class="w-10 h-10">
-            <h1 class="font-bold text-lg">Emergency Service</h1>
+      <div class="flex items-center gap-2">
+        <img src="./assets/logo.png" alt="Logo" class="w-10 h-10" />
+        <h1 class="font-bold text-lg">Emergency Service</h1>
+      </div>
+      <div class="flex items-center gap-6 text-lg bg-[]">
+        <div class="flex items-center gap-1">
+          ❤️ <span id="heartCount">0</span>
         </div>
-        <div class="flex items-center gap-6 text-lg bg-[]">
-            <div class="flex items-center gap-1">
-                ❤️ <span id="heartCount">0</span>
-            </div>
-            <div class="flex items-center gap-1">
-                💰 <span id="coinCount">100</span>
-            </div>
-            <div class="flex items-center gap-1">
-                📋 <span id="copyCount">0</span>
-            </div>
+        <div class="flex items-center gap-1">
+          💰 <span id="coinCount">100</span>
         </div>
+        <div class="flex items-center gap-1">
+          📋 <span id="copyCount">0</span>
+        </div>
+      </div>
     </nav>
     <!--  Hero Section -->
-    <section class="bg-gradient-to-r from-green-700 to-green-500 text-white py-10 text-center">
-        <img src="./assets/logo-dark.png" alt="Main Logo" class="mx-auto w-20 mb-4">
-        <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
-        <p class="mt-2">Government Emergency Services at Your Fingertips - A Project by Government of the People’s Republic of Bangladesh</p>
+    <section
+      class="bg-gradient-to-r from-green-700 to-green-500 text-white py-10 text-center"
+    >
+      <img src="./assets/logo-dark.png" alt="Main Logo" class="mx-auto w-20 mb-4"/>
+      <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
+      <p class="mt-2">Government Emergency Services at Your Fingertips - A Project by Government of the People’s Republic of Bangladesh</p>
     </section>
+    </header>
 
+    
+    <main class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-6">
+      <!--  Cards Section -->
+      <div
+        class="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cardSection"></div>
 
+      
+    </main>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
