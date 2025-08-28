@@ -3,14 +3,12 @@ let heartCount = 0;
 let coinCount = 100;
 let copyCount = 0;
 
-
 // select element
 const heartDisplay = document.getElementById("heartCount");
 const coinDisplay = document.getElementById("coinCount");
 const copyDisplay = document.getElementById("copyCount");
 const historyList = document.getElementById("historyList");
 const clearHistoryBtn = document.getElementById("clearHistory");
-
 
 // emergency services data
 const services = [
@@ -19,54 +17,63 @@ const services = [
     name: "National Emergency",
     number: "999",
     category: "All",
+    icons: "./assets/emergency.png",
   },
   {
     mainName: "Police Helpline Number",
     name: "Police",
     number: "999",
     category: "Police",
+    icons: "./assets/police.png",
   },
   {
     mainName: "Fire Service Number",
     name: "Fire Service",
     number: "999",
     category: "Fire",
+    icons: "./assets/fire-service.png",
   },
   {
     mainName: "Ambulance Service",
     name: "Ambulance",
     number: "16263",
     category: "Health",
+    icons: "./assets/ambulance.png",
   },
   {
     mainName: "Women & Child Helpline",
     name: "Women & Child Helpline",
     number: "109",
     category: "Help",
+    icons: "./assets/emergency.png",
   },
   {
     mainName: "Anti-Corruption Helpline",
     name: "Anti-Corruption",
     number: "106",
     category: "Govt",
+    icons: "./assets/emergency.png",
   },
   {
     mainName: "Electricity Helpline",
     name: "Electricity Outage",
     number: "16216",
     category: "Electricity",
+    icons: "./assets/emergency.png",
   },
   {
     mainName: "Brac Helpline",
     name: "Brac",
     number: "16445",
     category: "NGO",
+    icons: "./assets/emergency.png",
   },
   {
     mainName: "Bangladesh Railway Helpline ",
     name: "Bangladesh Railway",
     number: "163",
     category: "Travel",
+    icons: "./assets/emergency.png",
   },
 ];
 
@@ -78,6 +85,12 @@ services.forEach((service) => {
     "bg-white p-4 rounded-lg shadow flex flex-col gap-3 relative";
 
   card.innerHTML = `
+
+  <div class="flex justify-between items-start">
+    <img src="${service.icons}" alt="Icon" class="w-10 h-10 rounded-md" />
+    <button class="heartBtn text-gray-500 text-xl">♡</button>
+  </div>
+
         <!-- Heart button -->
         <button class="heartBtn absolute top-4 right-4 text-gray-500 text-xl">♡</button>
 
@@ -96,8 +109,6 @@ services.forEach((service) => {
     `;
   cardSection.appendChild(card);
 });
-
-
 
 // Event handling
 document.addEventListener("click", (e) => {
@@ -142,10 +153,8 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 // Clear history
 clearHistoryBtn.addEventListener("click", () => {
   historyList.innerHTML =
     '<li class="text-sm text-gray-500">No history yet...</li>';
 });
-
